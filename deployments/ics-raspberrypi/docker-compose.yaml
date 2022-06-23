@@ -5,7 +5,7 @@ services:
     privileged: true
     working_dir: /src
     entrypoint: ["./start.sh", "FactorySimulation.py"]
-    container_name: icsim
+    container_name: icss
     volumes:
       - ../src:/src
     networks:
