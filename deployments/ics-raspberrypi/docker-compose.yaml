@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  icsim:
+    build: /.
+    privileged: true
+    working_dir: /src
+    entrypoint: ["./start.sh", "FactorySimulation.py"]
+    container_name: icsim
+    volumes:
+      - ../src:/src
+    networks:
+      - host
+
+networks:
+  host:
+    name: host
+    external: true
